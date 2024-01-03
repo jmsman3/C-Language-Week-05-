@@ -1,0 +1,45 @@
+// Check Secondary Diagonal
+#include <stdio.h>
+
+int main()
+{
+    int row, col, i, j;
+    scanf("%d %d", &row, &col);
+    int a[row][col];
+    int element = row * col;
+    for (int i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    int flag = 1;
+    if (row != col)
+    {
+        flag = 0; // aita square matrix kina check korlam
+    }
+
+    for (int i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            if (i + j == row - 1) // aita Secondary korner jonno
+                continue;
+            if (a[i][j] != 0)
+                // zero hole toa kechu bolte parbo na but zero na hole bolte parbo je aita diagonal na
+                flag = 0;
+        }
+    }
+    if (flag == 1)
+    {
+        printf("Secondary Diagonal");
+    }
+    else
+    {
+        printf("Not Diagonal");
+    }
+
+    return 0;
+}

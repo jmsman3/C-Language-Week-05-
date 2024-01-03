@@ -1,0 +1,39 @@
+// tt
+#include <stdio.h>
+
+int main()
+{
+    int row, col, i, j;
+    scanf("%d %d", &row, &col);
+    int a[row][col];
+
+    for (int i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // row print
+    int c;
+    scanf("%d", &c);
+
+    for (i = 0; i < col; i++)
+    {
+        printf("%d ", a[c][i]);
+    }
+
+    printf("\n");
+    // colum print
+
+    int e;
+    scanf("%d", &c);
+
+    for (i = 0; i < row; i++)
+    {
+        printf("%d ", a[i][e]);
+    }
+
+    return 0;
+}
